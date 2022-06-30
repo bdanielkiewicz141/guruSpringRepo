@@ -11,8 +11,8 @@ import java.util.Set;
 public class Book {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO )
-   private long id;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private long id;
 
     private String title;
     private String isbn;
@@ -21,10 +21,9 @@ public class Book {
     private Publisher publisher;
 
     @ManyToMany
-    @JoinTable(name ="author_book", joinColumns = @JoinColumn(name ="book_id"),
+    @JoinTable(name = "author_book", joinColumns = @JoinColumn(name = "book_id"),
             inverseJoinColumns = @JoinColumn(name = "author_id"))
     private Set<Author> authors = new HashSet<>();
-
 
 
     public Book(String title, String isbn) {
@@ -99,7 +98,6 @@ public class Book {
                 "id=" + id +
                 ", title='" + title + '\'' +
                 ", isbn='" + isbn + '\'' +
-                ", authors=" + authors +
                 '}';
     }
 }

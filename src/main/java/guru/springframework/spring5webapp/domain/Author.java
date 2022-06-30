@@ -74,7 +74,6 @@ private Set<Book> books = new HashSet<>();
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", lastName='" + lastName + '\'' +
-                ", books=" + books +
                 '}';
     }
 }
