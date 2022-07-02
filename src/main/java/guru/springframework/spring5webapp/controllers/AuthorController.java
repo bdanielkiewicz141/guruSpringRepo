@@ -18,6 +18,6 @@ public class AuthorController {
 
         model.addAttribute("authors", authorRepository.findAll());
 
-        return "templates/authors/list1";
+        return "authors/List";
     }
 }
